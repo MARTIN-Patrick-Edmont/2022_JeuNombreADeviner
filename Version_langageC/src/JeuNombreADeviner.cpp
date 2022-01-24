@@ -46,7 +46,33 @@ int tirerNombreMystere(int nbMin, int nbMax)
 
 // Ajouter le CODE de  la fonction
 
-
+int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, int* esspent)
+{
+    int i, nbinp;
+    for(i=0; i<essmax ; i=i+1)
+    {
+        scanf("%d", &nbinp);
+        while(nbinp<nbmin || nbinp>nbmax)
+        {
+            printf("L'entrée n'est pas dans la plage de jeu");
+            scanf("%d", &nbinp);
+        }
+        if(nbinp==nbmyst)
+        {
+            *esspent = i ;
+            return 1 ;
+        }
+        if(nbinp<nbmyst)
+        {
+            printf("-");
+        }
+        else
+        {
+            printf("+");
+        }
+    }
+return 0 ;
+}
 
 
 

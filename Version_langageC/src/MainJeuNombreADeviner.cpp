@@ -17,7 +17,8 @@
 
 int main()
 {
-
+    int nbmyst, nbmin, nbmax, essmax, esspent ;
+    int *ptesspent;
 
     printf ("%s\n", "Vous allez jouer pour deviner un nombre secret");
 
@@ -25,7 +26,7 @@ int main()
 
     // Tirer aléatoirement le nombre à deviner
 
-
+    nbmyst = tirerNombreMystere(1, 10);
     // Jouer une partie
 
 
@@ -33,10 +34,17 @@ int main()
 
     printf("Vous avez 4 essais pour deviner le nombre myst\x8Are compris entre 0 et 10\n");
 
-
+    if(jouerPartie(nbmyst, nbmin, nbmax, essmax,&esspent))
+    {
+        printf("gagné");
+    }
+    else
+    {
+        printf("perdu");
+    }
     // Affichage du résultat de la partie
 
 
-    return 0;
+    return 0 ;
 }
 
