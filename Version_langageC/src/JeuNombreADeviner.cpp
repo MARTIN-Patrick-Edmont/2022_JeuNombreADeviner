@@ -49,33 +49,55 @@ int tirerNombreMystere(int nbMin, int nbMax)
 int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, int* esspent)
 {
     int i, nbinp;
-    for(i=0; i<essmax ; i=i+1)
+    i = 0 ;
+    nbinp = 0 ;
+    while(i<essmax)
     {
-        scanf("%d", &nbinp);
+        scanf("%i", &nbinp);
         while(nbinp<nbmin || nbinp>nbmax)
         {
-            printf("L'entrée n'est pas dans la plage de jeu");
-            scanf("%d", &nbinp);
+            printf("L'entrée n'est pas dans la plage de jeu \n");
+            scanf("%i", &nbinp);
         }
         if(nbinp==nbmyst)
         {
-            *esspent = i ;
+            *esspent = i+1 ; //i commence à zéro mais les essais à 1
             return 1 ;
         }
         if(nbinp<nbmyst)
         {
-            printf("-");
+            printf("+ \n");
         }
         else
         {
-            printf("+");
+            printf("- \n");
         }
+        i=i+1;
     }
 return 0 ;
 }
 
 
-
+bool menu(int nbpart, int nbvict)
+{
+    int menu ;
+    menu = 0 ;
+    printf("1 pour commencer, 2 pour stat, 3 pour réafficher instructions \n");
+    while(menu!=1)
+    {
+        menu = 0 ; // pour empêcher de déclencher à répétitions les ifs
+        scanf("%d", &menu);
+        if(menu==2)
+        {
+            printf("nbpart = %i, nbvict = %i \n", nbpart, nbvict) ;
+        }
+        if(menu==3)
+        {
+            printf("1 pour commencer, 2 pour stat, 3 pour réafficher instructions \n");
+        }
+    }
+    return 0 ;
+}
 
 
 

@@ -25,4 +25,16 @@ int tirerNombreMystere(int nbMin, int nbMax);
 // Valeur de retour : 0 si la partie est perdue, 1 sinon
 
 // Ajouter la DECLARATION de la fonction
-int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, int* esspent)
+int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, int* esspent);
+
+
+
+
+// Nom : menu
+// Rôle : interface pour commencer une partie ou afficher les statistiques
+//
+// Paramètres d'entrée: nbpart, nbvict
+// Paramètres de sortie: N/A
+// Valeur de retour : N/A
+
+bool menu(int nbpart, int nbvict);
