@@ -37,4 +37,4 @@ int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, int* esspent);
 // Paramètres de sortie: N/A
 // Valeur de retour : N/A
 
-bool menu(int nbpart, int nbvict);
+bool menu(int nbpart, int nbvict, int essall);

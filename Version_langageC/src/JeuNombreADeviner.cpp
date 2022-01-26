@@ -78,9 +78,10 @@ return 0 ;
 }
 
 
-bool menu(int nbpart, int nbvict)
+bool menu(int nbpart, int nbvict, int essall)
 {
     int menu ;
+    float moy ;
     menu = 0 ;
     printf("1 pour commencer, 2 pour stat, 3 pour réafficher instructions \n");
     while(menu!=1)
@@ -89,7 +90,15 @@ bool menu(int nbpart, int nbvict)
         scanf("%d", &menu);
         if(menu==2)
         {
-            printf("nbpart = %i, nbvict = %i \n", nbpart, nbvict) ;
+            if(nbpart==0) // on évite une division par 0
+            {
+                moy = 0 ;
+            }
+            else
+            {
+                moy = essall/nbpart ;
+            }
+            printf("nbpart = %i, nbvict = %i, moy : %f \n", nbpart, nbvict, moy) ;
         }
         if(menu==3)
         {

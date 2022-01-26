@@ -34,7 +34,7 @@ int main()
 
 
         // interface de début de partie
-        while(menu(nbpart,nbvict))
+        while(menu(nbpart,nbvict, essall))
         // Tirer aléatoirement le nombre à deviner
 
         nbmyst = tirerNombreMystere(0, 10);
