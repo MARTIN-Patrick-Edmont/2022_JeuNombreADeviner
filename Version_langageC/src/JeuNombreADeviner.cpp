@@ -46,7 +46,7 @@ int tirerNombreMystere(int nbMin, int nbMax)
 
 // Ajouter le CODE de  la fonction
 
-int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, int* esspent)
+int jouerPartie(int nbmyst, Tpartie nbmin, Tpartie nbmax, Tpartie essmax, Tpartie* esspent)
 {
     int i, nbinp;
     i = 0 ;

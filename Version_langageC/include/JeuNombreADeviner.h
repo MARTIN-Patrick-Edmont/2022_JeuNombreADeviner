@@ -8,7 +8,23 @@
 // Nom des composants utilises:
 // Historique du fichier:
 /*************************************************/
+    typedef struct
+    {
+        char nom[20] ;
+        int nbpart ;
+        int nbvict ;
+        int essall ;
+    } Tjoueur ;
 
+    typedef struct
+    {
+        Tjoueur j ;
+        int liml ; //limite basse
+        int limh ; // limite haute
+        int essmax ;
+        int esspent ;
+        bool vict ;
+    } Tpartie ;
 
 // Nom :tirerNombreMystere
 // Rôle : Tire aléatoirement un nombre à deviner entre nbMin et nbMAx
@@ -25,7 +41,7 @@ int tirerNombreMystere(int nbMin, int nbMax);
 // Valeur de retour : 0 si la partie est perdue, 1 sinon
 
 // Ajouter la DECLARATION de la fonction
-int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, int* esspent);
+int jouerPartie(int nbmyst, Tpartie nbmin, Tpartie nbmax, Tpartie essmax, Tpartie* esspent);
 
 
 

@@ -11,12 +11,13 @@
 /*************************************************/
 
 #include <stdio.h>
-
+#include <string.h>
 
 #include "../include/JeuNombreADeviner.h"
 
 int main()
 {
+    /*
     int nbmyst, nbmin, nbmax, essmax, esspent, nbpart, nbvict, essall;
     nbmin = 0 ;
     nbmax = 10 ;
@@ -25,10 +26,15 @@ int main()
     nbpart = 0 ;
     nbvict = 0 ;
     essall = 0 ; //nombre cumulé d'essai
-
+    */ // reste d'utilisation de variable globales
     printf ("%s\n", "Vous allez jouer pour deviner un nombre secret");
 
 
+
+    Tjoueur test ;
+    printf("Nom : ");
+    scanf("%s",test.nom);
+    printf("sdf %s", test.nom);
     while(1)
     {
 
