@@ -10,11 +10,11 @@
 // Historique du fichier:
 /*************************************************/
 
-#include <stdio.h>
+
 #include <string.h>
 #include <iostream>
 using namespace std;
-#include "../include/sdf.h"
+#include "JeuNombreADeviner.h"
 
 int main()
 {
@@ -29,8 +29,8 @@ int main()
     essall = 0 ; //nombre cumulé d'essai
     */ // reste d'utilisation de variable globales
     int nbmyst;
-    printf ("%s\n", "Vous allez jouer pour deviner un nombre secret");
-
+    //printf ("%s\n", "Vous allez jouer pour deviner un nombre secret");
+    cout << "Vous allez jouer pour deviner un nombre secret" << endl ;
 
 
     Tjoueur test ;
@@ -64,7 +64,7 @@ int main()
         //printf("Vous avez 4 essais pour deviner le nombre myst\x8Are compris entre 0 et 10\n");
         cout << "Vous avez 4 essais pour deviner le nombre myst\x8Are compris entre 0 et 10" << endl ;
         ptest.esspent = 0 ; // on reset le nombre d'essais avant d'initier une nouvelle partie, juste au cas où
-        if(JouerPartie(nbmyst, ptest.liml, ptest.limh, ptest.essmax, &ptest.esspent))
+        if(JouerPartie(nbmyst, &ptest))
         {
             /*printf("gagné \n");
             printf("nombre d'essai : %d \n", esspent);*/

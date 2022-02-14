@@ -48,11 +48,14 @@ int tirerNombreMystere(int nbMin, int nbMax)
 
 // Ajouter le CODE de  la fonction
 
-int jouerPartie(int nbmyst, int nbmin, int nbmax, int essmax, Tpartie* esspent)
+int JouerPartie(int nbmyst, Tpartie* p)
 {
-    int i, nbinp;
+    int i, nbinp, essmax, nbmin, nbmax;
     i = 0 ;
     nbinp = 0 ;
+    essmax = p->essmax ;
+    nbmin = p->liml ;
+    nbmax = p->limh ;
     while(i<essmax)
     {
         //scanf("%i", &nbinp);
