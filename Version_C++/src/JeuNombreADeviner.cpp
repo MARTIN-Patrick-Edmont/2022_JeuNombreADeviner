@@ -69,7 +69,7 @@ int JouerPartie(int nbmyst, Tpartie* p)
         }
         if(nbinp==nbmyst)
         {
-            //*esspent = i+1 ; //i commence à zéro mais les essais à 1
+            p->esspent = +i+1 ; //i commence à zéro mais les essais à 1
             return 1 ;
         }
         if(nbinp<nbmyst)
@@ -86,7 +86,7 @@ return 0 ;
 }
 
 
-bool menu(int nbpart, int nbvict, int essall)
+bool menu(int nbpart, int nbvict, int essall, char* status)
 {
     int menu ;
     float moy ;
@@ -95,7 +95,8 @@ bool menu(int nbpart, int nbvict, int essall)
     while(menu!=1)
     {
         menu = 0 ; // pour empêcher de déclencher à répétitions les ifs
-        scanf("%d", &menu);
+        //scanf("%d", &menu);
+        cin >> menu ;
         if(menu==2)
         {
             if(nbpart==0) // on évite une division par 0
@@ -104,13 +105,18 @@ bool menu(int nbpart, int nbvict, int essall)
             }
             else
             {
-                moy = essall/nbpart ;
+                moy =(float) essall/nbpart ;
             }
             printf("nbpart = %i, nbvict = %i, moy : %f \n", nbpart, nbvict, moy) ;
         }
         if(menu==3)
         {
             printf("1 pour commencer, 2 pour stat, 3 pour réafficher instructions \n");
+        }
+        if(menu==9)
+        {
+            status =0 ;
+            break ;
         }
     }
     return 0 ;

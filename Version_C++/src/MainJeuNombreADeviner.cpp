@@ -34,6 +34,8 @@ int main()
 
 
     Tjoueur test ;
+    test.nbpart=0 ;
+    test.nbvict=0 ;
     //printf("Nom : ");
     cout << "Nom : " ;
     //scanf("%s",test.nom);

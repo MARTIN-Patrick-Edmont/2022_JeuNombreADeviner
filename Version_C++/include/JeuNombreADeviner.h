@@ -53,4 +53,4 @@ int JouerPartie(int nbmyst, Tpartie* p);
 // Paramètres de sortie: N/A
 // Valeur de retour : N/A
 
-bool menu(int nbpart, int nbvict, int essall);
+bool menu(int nbpart, int nbvict, int essall,char* status);
