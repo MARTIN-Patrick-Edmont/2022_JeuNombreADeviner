@@ -23,7 +23,7 @@ class CJoueur {
     // Paramètre d'entrée : un_nom le nom du joueur
     // Sortie : le joueur créé
 
-    CJoueur(string un_nom);
+    CJoueur(string un_nom, string un_prenom);
 
     // Nom : MajResultats
     // Rôle : met à jour les informations d'un joueur
@@ -58,9 +58,20 @@ class CJoueur {
     string Nom();
 
 
+
+
+
+
+    // Nom: calculerMoyenneEssai
+    // Rôle : calcule la moyenne des essais
+    // Entrée
+    float calculerMoyenneEssai();
+
+
     private :
 
         string nom;  // nom du joueur
+        string prenom;
         int nbPartiesJouees;
         int nbPartiesGagnees;
         int nbTentatives;

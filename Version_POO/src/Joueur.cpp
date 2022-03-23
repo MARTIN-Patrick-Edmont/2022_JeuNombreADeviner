@@ -8,7 +8,7 @@
 // Nom des composants utilises:string
 // Historique du fichier:
 /*************************************************/
-
+#include <string>
 #include "../include/Joueur.h"
 
     // Nom :CJoueur  Constructeur
@@ -18,9 +18,10 @@
     //                  un_nom : le nom du joueur
     // Sortie : le joueur créé
 
-    CJoueur::CJoueur(string un_nom)
+    CJoueur::CJoueur(string un_nom, string un_prenom)
     {
         this->nom = un_nom;
+        this->prenom = un_prenom;
         this->nbPartiesGagnees = 0;
         this->nbPartiesJouees=0;
         this->nbTentatives=0;
@@ -81,6 +82,11 @@
     string CJoueur::Nom()
     {
 
-        return this->nom;
+        return this-> nom + " " + prenom;
     }
 
+    float CJoueur::calculerMoyenneEssai()
+    {
+        float moy = (float)this->nbTentatives/(float)this->nbPartiesJouees ;
+        return moy;
+    }

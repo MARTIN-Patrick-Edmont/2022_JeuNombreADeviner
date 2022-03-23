@@ -25,11 +25,22 @@ int main()
     cout << "----------------------------------------------"<< endl;
     cout << "Veuillez entrer votre nom" << endl;
     string un_nom;
+    string un_prenom;
+    bool nv_j=0;
     cin >> un_nom;
+    cin >> un_prenom ;
 
     // Création du joueur
-    CJoueur joueur (un_nom);
-
+    CJoueur joueur (un_nom, un_prenom);
+    cout << "Créer un nouveau joueur ? 0/1" << endl;
+    cin >> nv_j ;
+    if(nv_j){
+        cout << "Nom" << endl ;
+        cin >> un_nom ;// utilisé qu'une fois par j1, autant le réutiliser
+        cout << "Prenom" << endl;
+        cin >> un_prenom ;
+        CJoueur j2 (un_nom,un_prenom);
+    }
     cout << "----------------------------------------------"<< endl;
     int nbParties;
 
@@ -65,6 +76,7 @@ int main()
     cout << "Nombre de parties gagnees : " << nbsucces << endl;
     cout << "Nombre de parties perdues : " << nbechecs << endl;
     cout << "Nombre de tentatives totales : " << nbessais << endl;
+    cout << "Moyenne d'essais totale : " << joueur.calculerMoyenneEssai() << endl;
 
     cout << "----------------------------------------------"<< endl;
 
